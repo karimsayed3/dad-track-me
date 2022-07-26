@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:te/check_login.dart';
 import 'package:te/home.dart';
+import 'package:te/widgets/widgets.dart';
 // import 'package:login_ui_design/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -64,82 +65,15 @@ class StartState extends State<LoginScreen> {
           key: formKey,
           child: Column(
             children: [
-              Container(
-                alignment: Alignment.center,
-                margin: EdgeInsets.only(left: 20, right: 20, top: 70),
-                padding: EdgeInsets.only(left: 20, right: 20),
-                height: 60,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  color: Colors.grey[200],
-                  boxShadow: [
-                    BoxShadow(
-                        offset: Offset(0, 10),
-                        blurRadius: 50,
-                        color: Color(0xffEEEEEE)),
-                  ],
-                ),
-                child: TextFormField(
-                  controller: emailController,
-                  keyboardType: TextInputType.emailAddress,
-                  cursorColor: Color(0xffF5591F),
-                  decoration: InputDecoration(
-                    icon: Icon(
-                      Icons.email,
-                      color: Color(0xffF5591F),
-                    ),
-                    hintText: "Enter Email",
-                    enabledBorder: InputBorder.none,
-                    focusedBorder: InputBorder.none,
-                    errorBorder: InputBorder.none,
-                    focusedErrorBorder: InputBorder.none,
-                  ),
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return 'Please Enter Email Addresses';
-                    }
-                    return null;
-                  },
-                ),
+              textForm(
+                controller: emailController,
+                errorMessage: 'Please Enter Email Addresses',
+                hintText: "Enter Email",
               ),
-              Container(
-                alignment: Alignment.center,
-                margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-                padding: EdgeInsets.only(left: 20, right: 20),
-                height: 60,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  color: Color(0xffEEEEEE),
-                  boxShadow: [
-                    BoxShadow(
-                        offset: Offset(0, 20),
-                        blurRadius: 100,
-                        color: Color(0xffEEEEEE)),
-                  ],
-                ),
-                child: TextFormField(
-                  controller: nameController,
-                  keyboardType: TextInputType.name,
-                  cursorColor: Color(0xffF5591F),
-                  decoration: InputDecoration(
-                    focusColor: Color(0xffF5591F),
-                    icon: Icon(
-                      Icons.vpn_key,
-                      color: Color(0xffF5591F),
-                    ),
-                    hintText: "Enter Your Name",
-                    enabledBorder: InputBorder.none,
-                    focusedBorder: InputBorder.none,
-                    errorBorder: InputBorder.none,
-                    focusedErrorBorder: InputBorder.none,
-                  ),
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return 'Please Enter Your Name';
-                    }
-                    return null;
-                  },
-                ),
+              textForm(
+                controller: nameController,
+                errorMessage: 'Please Enter Your Name',
+                hintText: "Enter Your Name",
               ),
               GestureDetector(
                 onTap: ()  async{
