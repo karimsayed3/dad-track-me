@@ -75,6 +75,7 @@ class StartState extends State<LoginScreen> {
                 errorMessage: 'Please Enter Your Name',
                 hintText: "Enter Your Name",
               ),
+
               GestureDetector(
                 onTap: ()  async{
                   await SharedPref.setLoginValue(
