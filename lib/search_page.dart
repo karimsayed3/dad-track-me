@@ -17,6 +17,7 @@ class _MyWidgetState extends State<Search_for_user> {
         child: Column(
           children: [
             StreamBuilder(
+              
                       stream: FirebaseFirestore.instance
                           .collection('location')
                           .snapshots(),
