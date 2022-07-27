@@ -16,33 +16,20 @@ class _MyWidgetState extends State<Search_for_user> {
   TextEditingController searchController = TextEditingController();
   List<String> userList = [];
   String? searchItem;
-  final CollectionReference email = FirebaseFirestore.instance.collection('location');
 
-  
+  Future _create() async{
+    final userCollection = FirebaseFirestore.instance.collection('users');
+    final docRef = userCollection.doc('user-id');
+    
+    await docRef.set({
+      'username': "karim",
+      'age': 55
+    });
 
-
-
-  
-
-  getallUsers() async {
-    try{
-      await email.get().then((value) {
-        value.docs.forEach((element) {
-          print(element.data());
-        });
-        // print(value);
-      });
-    }
-    catch(e){
-      print(e.toString());
-      return null;
-    }
   }
-
   @override
   void initState() {
-    getallUsers();
-    super.initState();
+     super.initState();
   }
 
   @override
@@ -102,6 +89,7 @@ class _MyWidgetState extends State<Search_for_user> {
                         setState(() {
                           searchItem = searchController.text;
                         });
+                        _create();
                       },
                       icon: const Icon(Icons.search),
                     ),

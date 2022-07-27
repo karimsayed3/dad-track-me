@@ -16,8 +16,7 @@ class _MyMapState extends State<MyMap> {
   bool _added = false;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: StreamBuilder(
+    return StreamBuilder(
         stream: FirebaseFirestore.instance.collection('location').snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (_added) {
@@ -58,8 +57,7 @@ class _MyMapState extends State<MyMap> {
             },
           );
         },
-      ),
-    );
+      );
   }
 
   Future<void> mymap(AsyncSnapshot<QuerySnapshot> snapshot) async {
@@ -71,6 +69,6 @@ class _MyMapState extends State<MyMap> {
               snapshot.data!.docs.singleWhere(
                   (element) => element.id == widget.user_id)['longitude'],
             ),
-            zoom: 22.0)));
+            zoom: 20.0)));
   }
 }

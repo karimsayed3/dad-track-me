@@ -77,8 +77,8 @@ class StartState extends State<LoginScreen> {
               ),
 
               GestureDetector(
-                onTap: ()  async{
-                  await SharedPref.setLoginValue(
+                onTap: () {
+                  SharedPref.setLoginValue(
                     email: emailController.text,
                     name: nameController.text,
                     state: 'karim sayed ibrahim',

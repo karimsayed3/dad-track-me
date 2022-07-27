@@ -32,5 +32,5 @@ class SharedPref {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     var value = preferences.getString('name');
     return value;
-    }// ignore: unrelated_type_equality_checks
+    }
   }

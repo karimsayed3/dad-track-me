@@ -18,7 +18,7 @@ void main() async {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:  Search_for_user(),
+      home:  widget,
     ),
   );
 }
