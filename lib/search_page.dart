@@ -3,10 +3,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:te/mymap.dart';
-import 'package:te/widgets/widgets.dart';
 
+// ignore: camel_case_types
 class Search_for_user extends StatefulWidget {
-  Search_for_user({Key? key}) : super(key: key);
+  const Search_for_user({Key? key}) : super(key: key);
 
   @override
   State<Search_for_user> createState() => _MyWidgetState();
@@ -61,7 +61,7 @@ class _MyWidgetState extends State<Search_for_user> {
                           decoration: const InputDecoration(
                             icon: Icon(
                               Icons.email,
-                              color: const Color(0xffF5591F),
+                              color: Color(0xffF5591F),
                             ),
                             hintText: "Enter Email",
                             enabledBorder: InputBorder.none,
