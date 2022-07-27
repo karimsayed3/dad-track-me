@@ -48,7 +48,7 @@ class _MyMapState extends State<MyMap> {
                   snapshot.data!.docs.singleWhere(
                       (element) => element.id == widget.user_id)['longitude'],
                 ),
-                zoom: 22.0),
+                zoom: 20.0),
             onMapCreated: (GoogleMapController controller) async {
               setState(() {
                 _controller = controller;

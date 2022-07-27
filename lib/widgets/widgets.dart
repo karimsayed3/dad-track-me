@@ -9,7 +9,7 @@ textForm (
 ){
   return Container(
                 alignment: Alignment.center,
-                margin: EdgeInsets.only(left: 20, right: 20, top: 70),
+                margin: EdgeInsets.only(left: 20, right: 20, top: 20),
                 padding: EdgeInsets.only(left: 20, right: 20),
                 height: 60,
                 decoration: BoxDecoration(

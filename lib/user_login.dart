@@ -78,11 +78,7 @@ class StartState extends State<LoginScreen> {
 
               GestureDetector(
                 onTap: () {
-                  SharedPref.setLoginValue(
-                    email: emailController.text,
-                    name: nameController.text,
-                    state: 'karim sayed ibrahim',
-                  );
+                  
                   Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -92,6 +88,12 @@ class StartState extends State<LoginScreen> {
                         ),
                       ),
                     );
+                    
+                    SharedPref.setLoginValue(
+                    email: emailController.text,
+                    name: nameController.text,
+                    state: 'karim sayed ibrahim',
+                  );
                 },
                 child: Container(
                   alignment: Alignment.center,

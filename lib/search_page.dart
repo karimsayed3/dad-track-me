@@ -17,16 +17,8 @@ class _MyWidgetState extends State<Search_for_user> {
   List<String> userList = [];
   String? searchItem;
 
-  Future _create() async{
-    final userCollection = FirebaseFirestore.instance.collection('users');
-    final docRef = userCollection.doc('user-id');
-    
-    await docRef.set({
-      'username': "karim",
-      'age': 55
-    });
 
-  }
+  // }
   @override
   void initState() {
      super.initState();
@@ -89,7 +81,7 @@ class _MyWidgetState extends State<Search_for_user> {
                         setState(() {
                           searchItem = searchController.text;
                         });
-                        _create();
+                        // _create();
                       },
                       icon: const Icon(Icons.search),
                     ),
