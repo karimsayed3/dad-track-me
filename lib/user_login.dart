@@ -78,8 +78,8 @@ class StartState extends State<LoginScreen> {
 
               GestureDetector(
                 onTap: () {
-                  
-                  Navigator.push(
+                  if(formKey.currentState!.validate()){
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => MyApp(
@@ -94,6 +94,8 @@ class StartState extends State<LoginScreen> {
                     name: nameController.text,
                     state: 'karim sayed ibrahim',
                   );
+                  }
+                  
                 },
                 child: Container(
                   alignment: Alignment.center,

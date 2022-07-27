@@ -30,6 +30,7 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     _requestPermission();
+    _getLocation(widget.email,widget.name);
     location.changeSettings(interval: 300, accuracy: loc.LocationAccuracy.high);
     location.enableBackgroundMode(enable: true);
   }
@@ -38,6 +39,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0.0,
         backgroundColor: Color(0xffF5591F),
         title: Text('live location tracker'),
         actions: [

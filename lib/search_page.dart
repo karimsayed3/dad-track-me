@@ -28,12 +28,8 @@ class _MyWidgetState extends State<Search_for_user> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 0.0,
-        ),
         body: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 8),
           child: Column(
             children: [
               SizedBox(
@@ -43,8 +39,8 @@ class _MyWidgetState extends State<Search_for_user> {
                     Expanded(
                       child: Container(
                         alignment: Alignment.center,
-                        margin:
-                            const EdgeInsets.only(left: 20, right: 20, top: 10),
+                        // margin:
+                            // const EdgeInsets.only(left: 20, right: 20, top: 10),
                         padding: const EdgeInsets.only(left: 20, right: 20),
                         height: 60,
                         decoration: BoxDecoration(
