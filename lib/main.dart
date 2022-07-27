@@ -2,7 +2,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:te/check_login.dart';
 import 'package:te/home.dart';
-import 'package:te/search_page.dart';
 import 'package:te/user_login.dart';
 
 void main() async {
