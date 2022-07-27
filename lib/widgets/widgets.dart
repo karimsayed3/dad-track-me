@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 textForm (
   {
-    required TextEditingController controller,
+     TextEditingController? controller,
     required String hintText,
     required String errorMessage,
   }

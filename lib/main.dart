@@ -4,11 +4,6 @@ import 'package:te/check_login.dart';
 import 'package:te/home.dart';
 import 'package:te/search_page.dart';
 import 'package:te/user_login.dart';
-import 'package:location/location.dart' as loc;
-import 'package:permission_handler/permission_handler.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'dart:async';
-import 'package:te/mymap.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
