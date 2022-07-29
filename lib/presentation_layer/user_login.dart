@@ -1,9 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:te/check_login.dart';
-import 'package:te/home.dart';
-import 'package:te/widgets/widgets.dart';
+import 'package:te/SharedPref/check_login.dart';
+import 'package:te/presentation_layer/home.dart';
+import 'package:te/presentation_layer/widgets/widgets.dart';
 // import 'package:login_ui_design/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {

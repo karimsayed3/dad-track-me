@@ -1,8 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:te/check_login.dart';
-import 'package:te/home.dart';
-import 'package:te/user_login.dart';
+import 'package:te/SharedPref/check_login.dart';
+import 'package:te/presentation_layer/home.dart';
+import 'package:te/presentation_layer/user_login.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

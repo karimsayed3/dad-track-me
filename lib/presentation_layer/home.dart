@@ -5,8 +5,8 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:async';
-import 'package:te/mymap.dart';
-import 'package:te/search_page.dart';
+import 'package:te/presentation_layer/mymap.dart';
+import 'package:te/presentation_layer/search_page.dart';
 
 class MyApp extends StatefulWidget {
   final email;

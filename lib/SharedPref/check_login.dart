@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:te/home.dart';
+import 'package:te/presentation_layer/home.dart';
 
 class SharedPref {
   static setLoginValue({state, email, name}) async {
@@ -8,11 +8,6 @@ class SharedPref {
     preferences.setString("login", state);
     preferences.setString("email", email);
     preferences.setString("name", name);
-    // ignore: avoid_print
-    print(preferences.getString('login'));
-    print(preferences.getString('email'));
-    print(preferences.getString('name'));
-
   }
 
   static getLoginValue() async {

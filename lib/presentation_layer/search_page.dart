@@ -2,7 +2,7 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:te/mymap.dart';
+import 'package:te/presentation_layer/mymap.dart';
 
 // ignore: camel_case_types
 class Search_for_user extends StatefulWidget {
